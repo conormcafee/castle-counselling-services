@@ -1,0 +1,8 @@
+---
+layout: layout.njk
+title: My Rad Markdown Blog Post
+---
+
+{%- for service in services -%}
+  <a href="#">{{ service.title }}</a>
+{%- endfor -%}

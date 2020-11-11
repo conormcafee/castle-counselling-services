@@ -1,0 +1,11 @@
+---
+layout: layout.njk
+pagination:
+    data: services
+    size: 1
+    alias: service
+permalink: "services/{{ service.title | slug }}/"
+title: service.title
+---
+
+{{ service.field_body | safe }}

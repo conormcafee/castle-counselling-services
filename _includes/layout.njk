@@ -1,0 +1,146 @@
+---
+title: Affordable, Reliable &amp; Confidential Counselling
+---
+<!DOCTYPE html>
+<html lang="en-US">
+    
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+		<meta name="referrer" content="origin-when-cross-origin" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+		<title>{{ title  }} | Castle Counselling Services</title>
+		
+		<script>
+				document.createElement( "picture" );
+		</script>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/favicon/site.webmanifest">
+		<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#6dc9c9">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="theme-color" content="#ffffff">
+
+		{# {% minify %}
+				{% include ("/_shared/_seo") %}
+		{% endminify %} #}
+	</head>
+
+	<body class="bg-gray-pale font-base md:text-lg text-gray leading-normal antialiased">
+		<header class="header [ bg-white border-b-2 border-pink-light shadow ][ pt-3 ]">
+			<div class="wrapper [ md:flex md:justify-between md:py-4 ]">
+				<a href="/" class="block mx-4 no-underline">
+						<img src="/assets/svg/logo.svg" alt="Logo" />
+				</a>
+
+				<nav class="flex flex-wrap sm:flex-no-wrap items-center mt-2 [ md:justify-end md:mt-0 ]">
+					<a href="/what-we-offer" title="Go to What We Offer" class="[ text-sm font-base-semibold ][ w-1/2 sm:w-auto ][ block sm:inline-block ][ px-4 py-2 sm:py-4 ][ text-navy }} hover:text-green ][ no-underline ][ md:flex-auto ][ md:text-base ][ md:ml-3 ]">What We Offer</a>
+					<a href="/therapists" title="Go to Therapists" class="[ text-sm font-base-semibold ][ w-1/2 sm:w-auto ][ block sm:inline-block ][ px-4 py-2 sm:py-4 ][ text-navy }} hover:text-green ][ no-underline ][ md:flex-auto ][ md:text-base ][ md:ml-3 ]">Therapists</a>
+					<a href="/costs" title="Go to Costs" class="[ text-sm font-base-semibold ][ w-1/2 sm:w-auto ][ block sm:inline-block ][ px-4 py-2 sm:py-4 ][ text-navy }} hover:text-green ][ no-underline ][ md:flex-auto ][ md:text-base ][ md:ml-3 ]">Costs</a>
+					<a href="/get-in-touch" title="Go to Get in Touch" class="[ text-sm font-base-semibold ][ w-1/2 sm:w-auto ][ block sm:inline-block ][ px-4 py-2 sm:py-4 ][ text-navy }} hover:text-green ][ no-underline ][ md:flex-auto ][ md:text-base ][ md:ml-3 ]">Get in Touch</a>
+				</nav>
+			</div>
+		</header>
+
+		<main class="relative">
+			{{ content | safe }}
+		</main>
+
+  	<footer class="bg-navy text-white border-t-4 border-green">
+			<div class="footer-bg flex items-center justify-center [ px-4 pt-8 ]">
+				<img src="/assets/images/bacp-white.png" alt="Castle Counselling Services are part of the British Association of Counsellors and Psychotherapists" class="block w-1/3 h-auto sm:h-32 sm:w-auto mb-8 sm:mb-8 mr-8" />
+				<img src="/assets/images/national-counselling-white.png" alt="Castle Counselling Services are part of the National Counselling Society (NCS)" class="block w-1/3 h-auto sm:h-32 sm:w-auto mb-8 sm:mb-8 ml-8" />
+			</div>
+
+			<div class="wrapper [ px-4 pb-8 ][ md:flex ]">
+				{# Block 01 #}
+				<div class="pt-8 [ md:flex-1 ][ md:mr-8 ]">
+					{# Block 02 - What We Offer#}
+					<div>
+						<a href="/what-we-offer" title="What We Offer" class="footer-block_title footer-bg [ block no-underline ][ font-base-semibold text-base ][ p-4 text-white hover:text-pink ][ border-b border-green rounded-t-lg ]">What We Offer</a>
+
+						<ul class="footer_list [ list-reset shadow rounded-b-lg py-2 ]">
+							{% for item in whatWeOffer %}
+								<li>
+									<a href="#" title="{{ item.title }}" class="block flex items-center justify-between no-underline text-sm [ text-white hover:text-pink px-4 py-2 ]">
+										<span>{{ item.title }}</span>
+										<svg class="flex-no-shrink ml-2 fill-current" style="height: 10px; width: 10px;" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+											<title>Arrow Right Icon</title>
+											<path d="M12.128 3.237A6.473 6.473 0 0 0 9.763.872 6.358 6.358 0 0 0 6.5 0C5.32 0 4.233.29 3.237.872A6.471 6.471 0 0 0 .872 3.237 6.358 6.358 0 0 0 0 6.5c0 1.18.29 2.267.872 3.263a6.473 6.473 0 0 0 2.365 2.365A6.359 6.359 0 0 0 6.5 13c1.18 0 2.267-.29 3.263-.872a6.471 6.471 0 0 0 2.365-2.365A6.36 6.36 0 0 0 13 6.5a6.36 6.36 0 0 0-.872-3.263zM9.911 6.881l-3.843 3.842a.52.52 0 0 1-.38.161.52.52 0 0 1-.381-.16l-.864-.864a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.38L7.042 6.5 4.443 3.902a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.381l.864-.864a.52.52 0 0 1 .38-.16.52.52 0 0 1 .381.16L9.911 6.12a.52.52 0 0 1 .16.38.52.52 0 0 1-.16.382z" fill-rule="nonzero"/>
+										</svg>
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+
+					{# Block 02 - Therapists #}
+					<div class="pt-8">
+						<a href="/our-therapists" title="Our Therapists" class="footer-block_title footer-bg [ block no-underline ][ font-base-semibold text-base ][ p-4 text-white hover:text-pink ][ border-b border-green rounded-t-lg ]">Our Therapists</a>
+
+						<ul class="footer_list [ list-reset shadow rounded-b-lg py-2 ]">
+							{% for item in therapists %}
+								<li>
+									<a href="#" title="{{ item.title }}" class="block flex items-center justify-between no-underline text-sm [ text-white hover:text-pink px-4 py-2 ]">
+										<span>{{ item.title }}</span>
+										<svg class="flex-no-shrink ml-2 fill-current" style="height: 10px; width: 10px;" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+											<title>Arrow Right Icon</title>
+											<path d="M12.128 3.237A6.473 6.473 0 0 0 9.763.872 6.358 6.358 0 0 0 6.5 0C5.32 0 4.233.29 3.237.872A6.471 6.471 0 0 0 .872 3.237 6.358 6.358 0 0 0 0 6.5c0 1.18.29 2.267.872 3.263a6.473 6.473 0 0 0 2.365 2.365A6.359 6.359 0 0 0 6.5 13c1.18 0 2.267-.29 3.263-.872a6.471 6.471 0 0 0 2.365-2.365A6.36 6.36 0 0 0 13 6.5a6.36 6.36 0 0 0-.872-3.263zM9.911 6.881l-3.843 3.842a.52.52 0 0 1-.38.161.52.52 0 0 1-.381-.16l-.864-.864a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.38L7.042 6.5 4.443 3.902a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.381l.864-.864a.52.52 0 0 1 .38-.16.52.52 0 0 1 .381.16L9.911 6.12a.52.52 0 0 1 .16.38.52.52 0 0 1-.16.382z" fill-rule="nonzero"/>
+										</svg>
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+
+				{# Block 02 #}
+				<div class="pt-8 [ md:flex-1 ][ md:mr-l ]">
+					<a href="/services" title="Our Services" class="footer-block_title footer-bg [ block no-underline ][ font-base-semibold text-base ][ p-4 text-white hover:text-pink ][ border-b border-green rounded-t-lg ]">Our Services</a>
+
+					<ul class="footer_list [ list-reset shadow rounded-b-lg py-2 ] [ flex flex-wrap ][ footer-services ]">
+						{% for item in services %}
+							<li class="mr-4">
+								 <a href="/{{ item.uri }}" title="{{ item.title }}" class="block flex items-center justify-between no-underline text-sm [ text-white hover:text-pink px-4 py-2 ]">
+									<span>{{ item.title }}</span>
+									<svg class="flex-no-shrink ml-2 fill-current" style="height: 10px; width: 10px;" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+										<title>Arrow Right Icon</title>
+										<path d="M12.128 3.237A6.473 6.473 0 0 0 9.763.872 6.358 6.358 0 0 0 6.5 0C5.32 0 4.233.29 3.237.872A6.471 6.471 0 0 0 .872 3.237 6.358 6.358 0 0 0 0 6.5c0 1.18.29 2.267.872 3.263a6.473 6.473 0 0 0 2.365 2.365A6.359 6.359 0 0 0 6.5 13c1.18 0 2.267-.29 3.263-.872a6.471 6.471 0 0 0 2.365-2.365A6.36 6.36 0 0 0 13 6.5a6.36 6.36 0 0 0-.872-3.263zM9.911 6.881l-3.843 3.842a.52.52 0 0 1-.38.161.52.52 0 0 1-.381-.16l-.864-.864a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.38L7.042 6.5 4.443 3.902a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.381l.864-.864a.52.52 0 0 1 .38-.16.52.52 0 0 1 .381.16L9.911 6.12a.52.52 0 0 1 .16.38.52.52 0 0 1-.16.382z" fill-rule="nonzero"/>
+									</svg>
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer-bg [ text-sm ]">
+				<div class="wrapper [ md:flex items-center justify-between ][ px-4 py-8 ]">
+					<div class="flex items-center">
+
+						{# <a href="{{ socialMedia.facebook }}" class="inline-block mr-4 text-white hover:text-pink" title="Like Castle Counselling Services on Facebook" target="_blank">
+							<svg class="fill-current" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+								<title>Facebook</title>
+								<path d="M21.62 0H3.367A3.367 3.367 0 0 0 0 3.367V21.62a3.367 3.367 0 0 0 3.367 3.367h9.002l.016-8.93h-2.32a.547.547 0 0 1-.547-.544l-.012-2.878a.547.547 0 0 1 .548-.55h2.315V9.304c0-3.227 1.971-4.985 4.85-4.985h2.363c.302 0 .547.245.547.548v2.427a.547.547 0 0 1-.547.547h-1.45c-1.565 0-1.868.745-1.868 1.837v2.407h3.44c.328 0 .582.286.543.612l-.34 2.878a.547.547 0 0 1-.544.483h-3.084l-.015 8.929h5.356a3.367 3.367 0 0 0 3.367-3.367V3.367A3.367 3.367 0 0 0 21.62 0z" fill-rule="nonzero"/>
+							</svg>
+						</a>
+
+						<a href="{{ socialMedia.messenger }}" class="inline-block mr-4 text-white hover:text-pink" title="Message Castle Counselling Services on Facebook Messennger" target="_blank">
+							<svg class="fill-current" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+								<title>Messenger</title>
+								<path d="M12.477.002c6.742-.133 12.322 5.214 12.475 11.956C24.8 18.7 19.22 24.047 12.477 23.914a12.872 12.872 0 0 1-4.624-.85l-2.898 1.81a.52.52 0 0 1-.795-.44v-3.576A11.73 11.73 0 0 1 0 11.958C.155 5.216 5.734-.13 12.477.002zm8.213 8.525a.52.52 0 0 0-.665-.145l-5.406 2.947-3.364-2.884a.52.52 0 0 0-.706.027L4.312 14.71a.52.52 0 0 0 .616.824l5.406-2.948 3.367 2.885a.52.52 0 0 0 .705-.027l6.238-6.238a.52.52 0 0 0 .046-.679z" fill-rule="nonzero"/>
+							</svg>
+						</a> #}
+
+						<a href="/privacy-policy" class="inline-block no-underline text-white hover:text-pink mr-4">Privacy Policy</a>
+					</div>
+				
+					<p><a href="https://conormcafee.co.uk" target="_blank" class="inline-block no-underline text-white hover:text-pink" title="Web Design by Conor McAfee">Web Design</a> by Conor McAfee</p>
+				</div>
+			</div>
+		</footer>
+  </body>
+</html>
