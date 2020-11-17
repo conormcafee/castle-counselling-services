@@ -11,10 +11,6 @@ title: Affordable, Reliable &amp; Confidential Counselling
 		<meta name="referrer" content="origin-when-cross-origin" />
 		<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
 		<title>{{ title  }} | Castle Counselling Services</title>
-		
-		<script>
-				document.createElement( "picture" );
-		</script>
 
 		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -64,27 +60,29 @@ title: Affordable, Reliable &amp; Confidential Counselling
 
 						<ul class="footer_list [ list-reset shadow rounded-b-lg py-2 ]">
 							{% for item in whatWeOffer %}
-								<li>
-									<a href="#" title="{{ item.title }}" class="block flex items-center justify-between no-underline text-sm [ text-white hover:text-pink px-4 py-2 ]">
-										<span>{{ item.title }}</span>
-										<svg class="flex-no-shrink ml-2 fill-current" style="height: 10px; width: 10px;" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
-											<title>Arrow Right Icon</title>
-											<path d="M12.128 3.237A6.473 6.473 0 0 0 9.763.872 6.358 6.358 0 0 0 6.5 0C5.32 0 4.233.29 3.237.872A6.471 6.471 0 0 0 .872 3.237 6.358 6.358 0 0 0 0 6.5c0 1.18.29 2.267.872 3.263a6.473 6.473 0 0 0 2.365 2.365A6.359 6.359 0 0 0 6.5 13c1.18 0 2.267-.29 3.263-.872a6.471 6.471 0 0 0 2.365-2.365A6.36 6.36 0 0 0 13 6.5a6.36 6.36 0 0 0-.872-3.263zM9.911 6.881l-3.843 3.842a.52.52 0 0 1-.38.161.52.52 0 0 1-.381-.16l-.864-.864a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.38L7.042 6.5 4.443 3.902a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.381l.864-.864a.52.52 0 0 1 .38-.16.52.52 0 0 1 .381.16L9.911 6.12a.52.52 0 0 1 .16.38.52.52 0 0 1-.16.382z" fill-rule="nonzero"/>
-										</svg>
-									</a>
-								</li>
+								{% if item.enabled %}
+									<li>
+										<a href="/{{ item.uri }}" title="{{ item.title }}" class="block flex items-center justify-between no-underline text-sm [ text-white hover:text-pink px-4 py-2 ]">
+											<span>{{ item.title }}</span>
+											<svg class="flex-no-shrink ml-2 fill-current" style="height: 10px; width: 10px;" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+												<title>Arrow Right Icon</title>
+												<path d="M12.128 3.237A6.473 6.473 0 0 0 9.763.872 6.358 6.358 0 0 0 6.5 0C5.32 0 4.233.29 3.237.872A6.471 6.471 0 0 0 .872 3.237 6.358 6.358 0 0 0 0 6.5c0 1.18.29 2.267.872 3.263a6.473 6.473 0 0 0 2.365 2.365A6.359 6.359 0 0 0 6.5 13c1.18 0 2.267-.29 3.263-.872a6.471 6.471 0 0 0 2.365-2.365A6.36 6.36 0 0 0 13 6.5a6.36 6.36 0 0 0-.872-3.263zM9.911 6.881l-3.843 3.842a.52.52 0 0 1-.38.161.52.52 0 0 1-.381-.16l-.864-.864a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.38L7.042 6.5 4.443 3.902a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.381l.864-.864a.52.52 0 0 1 .38-.16.52.52 0 0 1 .381.16L9.911 6.12a.52.52 0 0 1 .16.38.52.52 0 0 1-.16.382z" fill-rule="nonzero"/>
+											</svg>
+										</a>
+									</li>
+								{% endif %}
 							{% endfor %}
 						</ul>
 					</div>
 
 					{# Block 02 - Therapists #}
 					<div class="pt-8">
-						<a href="/our-therapists" title="Our Therapists" class="footer-block_title footer-bg [ block no-underline ][ font-base-semibold text-base ][ p-4 text-white hover:text-pink ][ border-b border-green rounded-t-lg ]">Our Therapists</a>
+						<a href="/therapists" title="Our Therapists" class="footer-block_title footer-bg [ block no-underline ][ font-base-semibold text-base ][ p-4 text-white hover:text-pink ][ border-b border-green rounded-t-lg ]">Our Therapists</a>
 
 						<ul class="footer_list [ list-reset shadow rounded-b-lg py-2 ]">
 							{% for item in therapists %}
 								<li>
-									<a href="#" title="{{ item.title }}" class="block flex items-center justify-between no-underline text-sm [ text-white hover:text-pink px-4 py-2 ]">
+									<a href="/{{ item.uri }}" title="{{ item.title }}" class="block flex items-center justify-between no-underline text-sm [ text-white hover:text-pink px-4 py-2 ]">
 										<span>{{ item.title }}</span>
 										<svg class="flex-no-shrink ml-2 fill-current" style="height: 10px; width: 10px;" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
 											<title>Arrow Right Icon</title>
@@ -95,6 +93,24 @@ title: Affordable, Reliable &amp; Confidential Counselling
 							{% endfor %}
 						</ul>
 					</div>
+
+					{# <div class="pt-8">
+						<a href="/services" title="What We Offer" class="footer-block_title footer-bg [ block no-underline ][ font-base-semibold text-base ][ p-4 text-white hover:text-pink ][ border-b border-green rounded-t-lg ]">North Coast Counselling Services'</a>
+
+						<ul class="footer_list [ list-reset shadow rounded-b-lg py-2 ]">
+							{% for item in towns %}
+								<li>
+									<a href="/{{ item.uri }}" title="{{ item.title }}" class="block flex items-center justify-between no-underline text-sm [ text-white hover:text-pink px-4 py-2 ]">
+										<span>{{ item.title }}</span>
+										<svg class="flex-no-shrink ml-2 fill-current" style="height: 10px; width: 10px;" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+											<title>Arrow Right Icon</title>
+											<path d="M12.128 3.237A6.473 6.473 0 0 0 9.763.872 6.358 6.358 0 0 0 6.5 0C5.32 0 4.233.29 3.237.872A6.471 6.471 0 0 0 .872 3.237 6.358 6.358 0 0 0 0 6.5c0 1.18.29 2.267.872 3.263a6.473 6.473 0 0 0 2.365 2.365A6.359 6.359 0 0 0 6.5 13c1.18 0 2.267-.29 3.263-.872a6.471 6.471 0 0 0 2.365-2.365A6.36 6.36 0 0 0 13 6.5a6.36 6.36 0 0 0-.872-3.263zM9.911 6.881l-3.843 3.842a.52.52 0 0 1-.38.161.52.52 0 0 1-.381-.16l-.864-.864a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.38L7.042 6.5 4.443 3.902a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.381l.864-.864a.52.52 0 0 1 .38-.16.52.52 0 0 1 .381.16L9.911 6.12a.52.52 0 0 1 .16.38.52.52 0 0 1-.16.382z" fill-rule="nonzero"/>
+										</svg>
+									</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>#}
 				</div>
 
 				{# Block 02 #}

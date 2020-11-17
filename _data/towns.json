@@ -33,7 +33,8 @@
         "root": "4",
         "lft": "2",
         "rgt": "3",
-        "level": "1"
+        "level": "1",
+        "map": "/assets/svg/counselling-services-near-cushendall.svg"
     },
     {
         "id": "8",
@@ -69,7 +70,8 @@
         "root": "4",
         "lft": "4",
         "rgt": "5",
-        "level": "1"
+        "level": "1",
+        "map": "/assets/svg/counselling-services-near-portrush.svg"
     },
     {
         "id": "9",
@@ -105,7 +107,8 @@
         "root": "4",
         "lft": "6",
         "rgt": "7",
-        "level": "1"
+        "level": "1",
+        "map": "/assets/svg/counselling-services-near-coleraine.svg"
     },
     {
         "id": "10",
@@ -141,7 +144,8 @@
         "root": "4",
         "lft": "8",
         "rgt": "9",
-        "level": "1"
+        "level": "1",
+        "map": "/assets/svg/counselling-services-near-ballymena.svg"
     },
     {
         "id": "153",
@@ -177,7 +181,8 @@
         "root": "4",
         "lft": "10",
         "rgt": "11",
-        "level": "1"
+        "level": "1",
+        "map": "/assets/svg/counselling-services-near-armoy.svg"
     },
     {
         "id": "157",
@@ -213,7 +218,8 @@
         "root": "4",
         "lft": "12",
         "rgt": "13",
-        "level": "1"
+        "level": "1",
+        "map": "/assets/svg/counselling-services-near-ballymoney.svg"
     },
     {
         "id": "160",
@@ -249,6 +255,7 @@
         "root": "4",
         "lft": "14",
         "rgt": "15",
-        "level": "1"
+        "level": "1",
+        "map": "/assets/svg/counselling-services-near-cushendun.svg"
     }
 ]
