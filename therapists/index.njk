@@ -1,41 +1,32 @@
 ---
 layout: layout.njk
-pagination:
-    data: services
-    size: 1
-    alias: service
-permalink: "services/{{ service.title | slug }}/"
-title: service.title
+title: Therapists
 ---
 
 <section class="hero gradient-light [ px-4 pt-4 pb-8 ][ bg-pink-light bg-cover bg-center bg-no-repeat ]" style="background-image: url('/assets/images/hero/hero-graphic.jpg">
-	<div class="wrapper relative z-10">
+  <div class="wrapper relative z-10">
     <div class="md:pt-2">
-			<nav class="mb-8">
-				<ul class="list-reset [ sm:flex flex-wrap items-center ]">
-					<li class="inline-block sm:inline-flex items-center">
-						<a href="/" class="text-gray hover:text-green font-base-semibold text-sm no-underline">Home</a>
-						<span class="text-xs [ ml-2 ]">></span>
-					</li>
+      <nav class="mb-8">
+        <ul class="list-reset [ sm:flex flex-wrap items-center ]">
+          <li class="inline-block sm:inline-flex items-center">
+            <a href="/" class="text-gray hover:text-green font-base-semibold text-sm no-underline">Home</a>
+            <span class="text-xs [ ml-2 ]">&gt;</span>
+          </li>
 
-					<li class="inline-block m:inline-flex items-center [ ml-2 ]">
-						<a href="/services" class="text-gray hover:text-green font-base-semibold text-sm no-underline">Services</a>
-						<span class="text-xs [ ml-2 ]">></span>
-					</li>
-					
-					<li class="block [ sm:ml-2 ] sm:inline-flex items-center">
-						<span class="text-green font-base-semibold text-sm">{{ service.title | safe }}</span>
-					</li>
-				</ul>
-			</nav>
-            
-			<h1 class="font-heading leading-tight text-navy text-4xl max-w-md [ md:text-5xl ]">{{ service.title | safe }}</h1>
-            
-			<div class="cms-content mt-4 max-w-md">
-				{{ service.field_introduction | safe }}
-			</div>
-		</div>
-	</div>
+          
+          <li class="inline-block ml-2 sm:inline-flex items-center">
+            <span class="text-green font-base-semibold text-sm">Therapists</span>
+          </li>
+        </ul>
+      </nav>
+      
+      <h1 class="font-heading leading-tight text-navy text-4xl max-w-md [ md:text-5xl ]">Therapists</h1>
+
+      <div class="cms-content mt-4 max-w-md">
+        Counselling services in the North Coast Causeway area of Northern Ireland, we can offer you an initial telephone consultation for 15/20 minutes free of charge for you to discuss the reason you are seeking counselling.
+      </div>
+    </div>
+  </div>
 </section>
 
 {# Should be an include #}
@@ -50,29 +41,12 @@ title: service.title
 </section>
 
 <section class="px-4 pb-8">
-	<div class="wrapper">
-		<article class="cms-content cms-content--two-col [ max-w-lg ]">
-			{{ service.field_body | safe }}
-		</article>
-	</div>
-</section>
-
-{# Should be an include #}
-
-<section class="px-4 py-8">
-	<div class="wrapper">
-		<h2 class="[ font-heading leading-tight text-navy ][ text-blue text-3xl mb-4 ]">Who can help you?</h2>
-		<p>Counselling services in the North Coast Causeway area of Northern Ireland, we can offer you an initial telephone consultation for 15/20 minutes free of charge for you to discuss the reason you are seeking counselling.</p>
-		
-		<div class="sm:flex sm:justify-between">
-			{# Should be an include #}
+  <div class="wrapper">
+    <div class="sm:flex sm:justify-between">
+      {# Should be an include #}
       {% for therapist in therapists %}
         <figure class="[ md:flex-1 ][ bg-white border-t border-sold border-gray-light ][ shadow ][ mt-8 ][ rounded-lg overflow-hidden ][ md:mr-8 ]">
-          {% if therapist.slug == 'louise-okane' %}
-            <img src="/assets/images/louise-o-kane.jpeg" class="block" alt="Profile photo of Louise O'Kane">
-          {% else %}
-            <img src="/assets/images/monica-o-neil.jpeg" class="block" alt="Profile photo of Monica O'Neill">
-          {% endif %}
+            <img src="{{ therapist.photo }}" class="block" alt="Profile photo of Louise O'Kane">
           <figcaption>
             <header class="[ flex items-end justify-between ][ bg-navy border-b border-solid border-gray-light ][ p-4 ]">
               <div>
@@ -105,6 +79,6 @@ title: service.title
           </figcaption>
         </figure>
       {% endfor %}
-		</div>
-	</div>
+    </div>
+  </div>
 </section>

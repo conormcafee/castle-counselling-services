@@ -1,0 +1,78 @@
+---
+layout: layout.njk
+pagination:
+    data: whatWeOffer
+    size: 1
+    alias: whatWeOffer
+permalink: "what-we-offer/{{ whatWeOffer.title | slug }}/"
+title: whatWeOffer.title
+---
+
+<section class="hero gradient-light [ px-4 pt-4 pb-8 ][ bg-pink-light bg-cover bg-center bg-no-repeat ]" style="background-image: url('/assets/images/hero/hero-graphic.jpg">
+	<div class="wrapper relative z-10">
+    <div class="md:pt-2">
+			<nav class="mb-8">
+				<ul class="list-reset [ sm:flex flex-wrap items-center ]">
+					<li class="inline-block sm:inline-flex items-center">
+						<a href="/" class="text-gray hover:text-green font-base-semibold text-sm no-underline">Home</a>
+						<span class="text-xs [ ml-2 ]">></span>
+					</li>
+
+					<li class="inline-block m:inline-flex items-center [ ml-2 ]">
+						<a href="/what-we-offer" class="text-gray hover:text-green font-base-semibold text-sm no-underline">What We Offer</a>
+						<span class="text-xs [ ml-2 ]">></span>
+					</li>
+					
+					<li class="block [ sm:ml-2 ] sm:inline-flex items-center">
+						<span class="text-green font-base-semibold text-sm">{{ whatWeOffer.title | safe }}</span>
+					</li>
+				</ul>
+			</nav>
+            
+			<h1 class="font-heading leading-tight text-navy text-4xl max-w-md [ md:text-5xl ]">{{ whatWeOffer.title | safe }}</h1>
+            
+			<div class="cms-content mt-4 max-w-md">
+				{{ whatWeOffer.field_introduction | safe }}
+			</div>
+		</div>
+	</div>
+</section>
+
+{# Should be an include #}
+
+<section class="px-4 pb-8 mb-4">
+	<div class="wrapper">
+		<a href="/get-in-touch" class="[ block no-underline ][ text-center md:text-left ][ p-8 ][ bg-navy opacity-99 rounded-lg ][ sm:flex sm:items-center md:justify-between ]">
+    	<span class="[ block ][ font-base-semibold text-center text-white leading-none tracking-wide [ text-2xl md:text-4xl ] ]">Book your counselling session today</span>
+			<span class="button button-green [ inline-block relative px-8 py-2 ][ rounded-full ][ font-base-semibold ][ no-underline ][ bg-green hover:bg-green-dark ][ text-white ][ mt-6 [ sm:mt-0 ] ]">Get in Touch</span>
+		</a>
+  </div>
+</section>
+
+<section class="px-4 pb-8">
+	<div class="wrapper">
+		<article class="cms-content cms-content--two-col [ max-w-lg ]">
+			{{ whatWeOffer.field_body | safe }}
+		</article>
+	</div>
+</section>
+
+<section class="bg-navy text-white border-t-2 border-pink px-4 mt-8 pt-8">
+  <div class="wrapper [ md:flex ]">
+    <article class="md:flex-1 md:mr-8 pt-4 pb-8 mb-8">
+      <h3 class="[ font-heading leading-tight ][ text-white ][ text-3xl ][ mb-4 ]">How much does Counselling cost?</h3>
+      <p>We offer an affordable, reliable and cofidential services in the north coast area.  We can offer you an initial telephone consultation of 15/20 minutes free of charge for you to discuss with us the reason you are seeking counselling.</p>
+      <p>We are both very passionate about our work, and about the results that can be achieved through the therapeutic alliance.</p>
+        
+      <a href="/costs" title="Go to Counselling Costs" class="button button-green [ inline-block relative px-8 py-2 ][ rounded-full ][ font-base-semibold ][ no-underline ][ bg-green hover:bg-green-dark ][ text-white ][ mt-4 ]">Counselling Costs</a>
+    </article>
+      
+    <aside class="md:flex-1 md:ml-8">
+      <blockquote class="quote [ border-l-4 border-pink ][ bg-white md:shadow ][ pl-4 py-4 md:ph-8 md:py-4 ][ -mx-4 mt-8 md:mr-0 md:ml-8 ][ max-w-sm ]">
+        <p class="[ font-heading leading-tight text-navy ][ text-xl md:text-4xl md:p-4 ]">"We offer an initial 15/20 minute consultation free of charge"</p>
+      </blockquote>
+    </aside>
+  </div>
+</section>
+
+<img src="/assets/images/louise-and-monica.jpg" class="block mx-auto" alt="Louise and Monica of Castle Counselling Services">

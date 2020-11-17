@@ -1,0 +1,117 @@
+---
+layout: layout.njk
+title: Costs
+---
+
+<section class="hero gradient-light [ px-4 pt-4 pb-8 ][ bg-pink-light bg-cover bg-center bg-no-repeat ]" style="background-image: url('/assets/images/hero/hero-graphic.jpg">  
+  <div class="wrapper relative z-10 [ md:flex items-center ]">
+    <div class="md:pt-2 [ md:flex-1 md:mr-8 ]">
+      <nav class="mb-8">
+        <ul class="list-reset [ sm:flex flex-wrap items-center ]">
+          <li class="inline-block sm:inline-flex items-center">
+            <a href="/" class="text-gray hover:text-green font-base-semibold text-sm no-underline">Home</a>
+            <span class="text-xs [ ml-2 ]">&gt;</span>
+          </li>
+
+          
+          <li class="inline-block ml-2 sm:inline-flex items-center">
+            <span class="text-green font-base-semibold text-sm">Costs</span>
+          </li>
+        </ul>
+      </nav>
+      
+      <h1 class="font-heading leading-tight text-navy text-4xl max-w-md [ md:text-5xl ]">How much does counselling cost?</h1>
+
+            
+      <div class="cms-content mt-4 max-w-md">
+        <p>We offer counselling services in the North Coast Causeway area of Northern Ireland, we can offer you an initial telephone consultation for 15/20 minutes free of charge for you to discuss the reason you are seeking counselling.</p>
+        <p>After that we will arrange a one-to-one session. If you choose Face-to-Face then you will come into our Ballycastle office to begin your counselling. </p>
+      </div>
+    </div>
+            
+    <aside class="[ bg-white ][ overflow-hidden ][ border border-gray-light shadow rounded-lg ][ mt-8 ][ md:flex-1 md:ml-8 ]">
+      <ul class="list-reset">
+        <li>
+          <a href="/what-we-offer/face-to-face-counselling" class="[ bg-white ][ block flex items-center ][ px-4 py-6 ][ border-b border-gray-light ][ no-underline ]"> 
+            <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <title>Tick Icon</title>
+              <path d="M22 0C9.8 0 0 9.8 0 22s9.8 22 22 22 22-9.8 22-22S34.2 0 22 0zm12.7 15.1l-16 16.6c-.2.2-.4.3-.7.3-.3 0-.6-.1-.7-.3l-7.8-8.4-.2-.2c-.2-.2-.3-.5-.3-.7 0-.2.1-.5.3-.7l1.4-1.4c.4-.4 1-.4 1.4 0l.1.1 5.5 5.9c.2.2.5.2.7 0l13.4-13.9h.1c.4-.4 1-.4 1.4 0l1.4 1.4c.4.3.4.9 0 1.3z" fill="#6DC9C9" fill-rule="nonzero"></path>
+            </svg>
+
+            <div class="ml-4">
+              <p class="[ font-heading leading-tight text-navy ][ text-xl ]">Face to Face Counselling</p>
+              <p class="[ text-pink ]">£30 per hour (concessions may be available)</p>
+            </div>
+          </a>
+          </li>
+          
+          <li>
+            <a href="/what-we-offer/mental-health-awareness-sessions" class="[ bg-gray-pale ][ block flex items-center ][ px-4 py-6 ][ border-b border-gray-light ][ no-underline ]">   
+              <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                <title>Tick Icon</title>
+                <path d="M22 0C9.8 0 0 9.8 0 22s9.8 22 22 22 22-9.8 22-22S34.2 0 22 0zm12.7 15.1l-16 16.6c-.2.2-.4.3-.7.3-.3 0-.6-.1-.7-.3l-7.8-8.4-.2-.2c-.2-.2-.3-.5-.3-.7 0-.2.1-.5.3-.7l1.4-1.4c.4-.4 1-.4 1.4 0l.1.1 5.5 5.9c.2.2.5.2.7 0l13.4-13.9h.1c.4-.4 1-.4 1.4 0l1.4 1.4c.4.3.4.9 0 1.3z" fill="#6DC9C9" fill-rule="nonzero"></path>
+              </svg>
+
+              <div class="ml-4">
+                <p class="[ font-heading leading-tight text-navy ][ text-xl ]">Mental Health Awareness Sessions</p>
+                <p class="[ text-pink ]">Free</p>
+              </div>
+            </a>
+          </li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+{# Should be an include #}
+
+<section class="px-4 pb-8 mb-4">
+	<div class="wrapper">
+		<a href="/get-in-touch" class="[ block no-underline ][ text-center md:text-left ][ p-8 ][ bg-navy opacity-99 rounded-lg ][ sm:flex sm:items-center md:justify-between ]">
+    	<span class="[ block ][ font-base-semibold text-center text-white leading-none tracking-wide [ text-2xl md:text-4xl ] ]">Book your counselling session today</span>
+			<span class="button button-green [ inline-block relative px-8 py-2 ][ rounded-full ][ font-base-semibold ][ no-underline ][ bg-green hover:bg-green-dark ][ text-white ][ mt-6 [ sm:mt-0 ] ]">Get in Touch</span>
+		</a>
+  </div>
+</section>
+
+<section class="px-4 pb-8 mb-8">
+  <div class="wrapper">
+    
+    <div
+      class="bg-white shadow border border-gray-light rounded-lg overflow-hidden"
+    >
+      <span
+        class="block font-base-semibold text-sm bg-navy text-white uppercase tracking-wide border-b-2 border-green p-4"
+        >Castle Counselling Services can help with:</span
+      >
+
+      <ul class="ccs-list [ list-reset ][ md:flex md:flex-wrap ]">
+        {% for item in services %}
+        <li
+          class="border-b border-gray-light flex items-center justify-between [ md:w-1/2 ][ lg:w-1/3 ]"
+        >
+          <a
+            href="/{{ item.uri }}"
+            class="[ block flex items-center justify-between w-full ] [ no-underline text-gray hover:text-green ][ p-4 ]"
+          >
+            <span>{{ item.title }}</span>
+            <svg
+              class="flex-no-shrink ml-4"
+              style="height: 13px; width: 13px"
+              viewBox="0 0 13 13"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Arrow Right Icon</title>
+              <path
+                d="M12.128 3.237A6.473 6.473 0 0 0 9.763.872 6.358 6.358 0 0 0 6.5 0C5.32 0 4.233.29 3.237.872A6.471 6.471 0 0 0 .872 3.237 6.358 6.358 0 0 0 0 6.5c0 1.18.29 2.267.872 3.263a6.473 6.473 0 0 0 2.365 2.365A6.359 6.359 0 0 0 6.5 13c1.18 0 2.267-.29 3.263-.872a6.471 6.471 0 0 0 2.365-2.365A6.36 6.36 0 0 0 13 6.5a6.36 6.36 0 0 0-.872-3.263zM9.911 6.881l-3.843 3.842a.52.52 0 0 1-.38.161.52.52 0 0 1-.381-.16l-.864-.864a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.38L7.042 6.5 4.443 3.902a.52.52 0 0 1-.16-.381.52.52 0 0 1 .16-.381l.864-.864a.52.52 0 0 1 .38-.16.52.52 0 0 1 .381.16L9.911 6.12a.52.52 0 0 1 .16.38.52.52 0 0 1-.16.382z"
+                fill="#6DC9C9"
+                fill-rule="nonzero"
+              />
+            </svg>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

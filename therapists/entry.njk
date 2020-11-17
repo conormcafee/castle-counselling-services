@@ -1,0 +1,117 @@
+---
+layout: layout.njk
+pagination:
+    data: therapists
+    size: 1
+    alias: therapist
+permalink: "{{ therapist.uri }}/"
+title: therapist.title
+---
+
+<section class="hero gradient-light [ px-4 pt-4 pb-8 ][ bg-pink-light bg-cover bg-center bg-no-repeat ]" style="background-image: url('/assets/images/hero/hero-graphic.jpg">
+	<div class="wrapper relative z-10">
+    <div class="md:pt-2">
+			<nav class="mb-8">
+				<ul class="list-reset [ sm:flex flex-wrap items-center ]">
+					<li class="inline-block sm:inline-flex items-center">
+						<a href="/" class="text-gray hover:text-green font-base-semibold text-sm no-underline">Home</a>
+						<span class="text-xs [ ml-2 ]">></span>
+					</li>
+
+					<li class="inline-block m:inline-flex items-center [ ml-2 ]">
+						<a href="/therapists" class="text-gray hover:text-green font-base-semibold text-sm no-underline">Therapists</a>
+						<span class="text-xs [ ml-2 ]">></span>
+					</li>
+					
+					<li class="block [ sm:ml-2 ] sm:inline-flex items-center">
+						<span class="text-green font-base-semibold text-sm">{{ therapist.title | safe }}</span>
+					</li>
+				</ul>
+			</nav>
+            
+			<h1 class="font-heading leading-tight text-navy text-4xl max-w-md [ md:text-5xl ]">{{ therapist.title | safe }}</h1>
+            
+			<div class="cms-content mt-4 max-w-md">
+				{{ therapist.field_introduction | safe }}
+			</div>
+		</div>
+    <div class="bg-white border border-gray-light rounded-lg shadow sm:inline-flex flex-wrap mt-4">
+      <a href="tel:{{ therapist.field_telephoneNumber }}" class="block flex items-center [ px-8 py-4 ][ no-underline ][ hover:bg-gray-pale ]">
+        <svg width="33" height="33" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <title>Call Icon</title>
+          <path d="M21.702 0C9.717 0 0 9.717 0 21.702c0 11.984 9.717 21.701 21.702 21.701 11.984 0 21.701-9.717 21.701-21.701C43.403 9.717 33.686 0 21.702 0zm11.46 31.665l-1.738 1.738c-.31.31-1.218.503-1.248.503a20.507 20.507 0 0 1-14.678-6 20.532 20.532 0 0 1-6.004-14.73c0-.002.2-.884.51-1.191l1.737-1.738c.636-.639 1.857-.927 2.713-.641l.365.122c.853.286 1.749 1.23 1.985 2.098l.874 3.208c.235.872-.082 2.112-.718 2.747l-1.16 1.16a12.324 12.324 0 0 0 8.665 8.669l1.16-1.16c.639-.64 1.878-.957 2.748-.722l3.207.877c.87.24 1.813 1.13 2.099 1.982l.122.37c.283.854-.003 2.075-.64 2.708z" fill="#6DC9C9" fill-rule="nonzero"/>
+        </svg>
+
+        <div class="ml-4">
+          <span class="block font-heading text-lg leading-tight text-navy">Call {{ fullName[0] }}</span>
+        </div>
+      </a>
+      
+      <a href="mailto:{{ therapist.field_emailAddress }}" class="block flex items-center [ px-8 py-4 ][ no-underline ][ border-t sm:border-t-0 sm:border-l border-gray-light ][ hover:bg-gray-pale ]">
+        <svg width="33" height="33" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+          <title>Call Icon</title>
+          <path d="M21.702 0C9.717 0 0 9.717 0 21.702c0 11.984 9.717 21.701 21.702 21.701 11.984 0 21.701-9.717 21.701-21.701C43.403 9.717 33.686 0 21.702 0zm11.46 31.665l-1.738 1.738c-.31.31-1.218.503-1.248.503a20.507 20.507 0 0 1-14.678-6 20.532 20.532 0 0 1-6.004-14.73c0-.002.2-.884.51-1.191l1.737-1.738c.636-.639 1.857-.927 2.713-.641l.365.122c.853.286 1.749 1.23 1.985 2.098l.874 3.208c.235.872-.082 2.112-.718 2.747l-1.16 1.16a12.324 12.324 0 0 0 8.665 8.669l1.16-1.16c.639-.64 1.878-.957 2.748-.722l3.207.877c.87.24 1.813 1.13 2.099 1.982l.122.37c.283.854-.003 2.075-.64 2.708z" fill="#6DC9C9" fill-rule="nonzero"/>
+        </svg>
+
+        <div class="ml-4">
+          <span class="block font-heading text-lg leading-tight text-navy">Email {{ therapist.title }}</span>
+        </div>
+      </a>
+
+  </div>
+	</div>
+</section>
+
+<section class="px-4 sm:py-8">
+  <div class="wrapper [ md:flex ]">
+    <article class="[ cms-content md:flex-1 md:mr-8 ]">
+      {{ therapist.field_body | safe }}
+    </article>
+    
+    <aside class="[ my-8 md:mt-0 md:ml-8 ][ md:flex-1 ]">
+      
+      {# Bio #}
+      <div class="bg-white border border-gray-light shadow overflow-hidden rounded-lg mb-8">
+        
+        <img src="{{ therapist.photo }}" class="db mx-auto border-b-2 border-green" alt="" />
+                
+        <ul class="list-reset text-base">
+          
+          <li class="px-4 py-2 [ border-t border-gray-light ]"><b class="text-navy">Full Name:</b> {{ therapist.title | safe }}</li>
+          <li class="px-4 py-2 [ border-t border-gray-light ]"><b class="text-navy">Phone:</b> {{ therapist.field_telephoneNumber | safe }}</li>
+          <li class="px-4 py-2 [ border-t border-gray-light ]"><b class="text-navy">Email:</b> {{ therapist.field_emailAddress | safe }}</li>
+
+          
+          
+            {# <li class="px-4 py-2 [ flex items-center ][ border-t border-gray-light ]">
+            {% set fullName = entry.title|split(' ') %}
+              <a href="#" class="block flex items-center no-underline" target="_blank">
+                <svg class="block mr-4" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+                  <title>Google Icon</title>
+                  <g fill-rule="nonzero" fill="none">
+                      <path d="M5.54 15.108l-.87 3.248-3.18.068A12.444 12.444 0 0 1 0 12.5c0-2.073.504-4.027 1.398-5.749l2.832.52 1.24 2.814a7.43 7.43 0 0 0-.4 2.415c0 .918.166 1.797.47 2.608z" fill="#FBBB00"/>
+                      <path d="M24.782 10.165c.143.756.218 1.537.218 2.335 0 .895-.094 1.768-.273 2.61a12.497 12.497 0 0 1-4.401 7.138h-.001l-3.567-.183-.504-3.15a7.45 7.45 0 0 0 3.205-3.805h-6.684v-4.945h12.007z" fill="#518EF8"/>
+                      <path d="M20.325 22.247A12.447 12.447 0 0 1 12.5 25c-4.76 0-8.899-2.66-11.01-6.576l4.05-3.316a7.432 7.432 0 0 0 10.713 3.806l4.072 3.333z" fill="#28B446"/>
+                      <path d="M20.479 2.878l-4.05 3.315A7.435 7.435 0 0 0 5.47 10.085L1.398 6.751A12.498 12.498 0 0 1 12.5 0c3.033 0 5.814 1.08 7.979 2.878z" fill="#F14336"/>
+                  </g>
+                </svg>
+                
+                <span class="text-navy"><b>Connect with {{ fullName[0] }} on Google Hangouts</b></span>
+              </a>
+            </li> #}
+        </ul>
+      </div>
+        
+      {# Traning #}
+        
+      {# <div class="bg-white shadow border border-gray-light rounded-lg overflow-hidden">
+         <span class="block font-base-semibold text-sm bg-navy text-white uppercase tracking-wide border-b-2 border-green p-4">Training Attended:</span>
+        <ul class="ccs-list_alt [ text-base text-gray list-reset">
+          {% for item in therapist.field_trainingAttended %}
+            <li class="block w-full p-4 border-b border-gray-light">{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div> #}
+    </aside>
+  </div>
+</section>
