@@ -5,7 +5,8 @@ pagination:
     size: 1
     alias: service
 permalink: "services/{{ service.title | slug }}/"
-title: service.title
+renderData:
+  title: "{{ service.title }}"
 ---
 
 <section class="hero gradient-light [ px-4 pt-4 pb-8 ][ bg-pink-light bg-cover bg-center bg-no-repeat ]" style="background-image: url('/assets/images/hero/hero-graphic.jpg">

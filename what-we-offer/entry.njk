@@ -5,7 +5,8 @@ pagination:
     size: 1
     alias: whatWeOffer
 permalink: "what-we-offer/{{ whatWeOffer.title | slug }}/"
-title: whatWeOffer.title
+renderData:
+  title: "{{ whatWeOffer.title }}"
 ---
 
 <section class="hero gradient-light [ px-4 pt-4 pb-8 ][ bg-pink-light bg-cover bg-center bg-no-repeat ]" style="background-image: url('/assets/images/hero/hero-graphic.jpg">

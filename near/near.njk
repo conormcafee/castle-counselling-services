@@ -1,0 +1,36 @@
+---
+layout: layout.njk
+pagination:
+    data: towns
+    size: 1
+    alias: town
+permalink: "near/{{ town.title | slug }}/"
+renderData:
+  title: "{{ town.title }}"
+---
+
+<section class="hero gradient-light [ px-4 pt-4 pb-8 ][ bg-pink-light bg-cover bg-center bg-no-repeat ]" style="background-image: url('/assets/images/hero/hero-graphic.jpg">    
+  <div class="wrapper relative z-10% [ md:flex items-center ]">
+    <div class="[ md:flex-1 md:mr-8 ]">
+      <h1 class="font-heading leading-tight text-navy text-4xl max-w-md [ md:text-5xl ]">Counselling services near <span class="text-pink">{{ town.title | safe }}</span></h1>
+      <div class="cms-content mt-4 max-w-md">
+        {{ town.field_introduction | safe }}
+      </div>
+
+      
+    </div>
+
+    <figure class="relative mt-8 z-10">
+      <img src="{{ town.map }}" alt="" />
+    </figure>
+  </div>
+</section>
+
+<section class="px-4 py-8 mb-4">
+  <div class="wrapper">
+    <a href="/get-in-touch" class="[ block no-underline ][ text-center md:text-left ][ p-8 ][ bg-navy opacity-99 rounded-lg ][ sm:flex sm:items-center md:justify-between ]">
+      <span class="[ block ][ font-base-semibold text-center text-white leading-none tracking-wide [ text-2xl md:text-4xl ] ]">Book your counselling session today</span>
+      <span class="button button-green [ inline-block relative px-8 py-2 ][ rounded-full ][ font-base-semibold ][ no-underline ][ bg-green hover:bg-green-dark ][ text-white ][ mt-6 [ sm:mt-0 ] ]">Get in Touch</span>
+    </a>
+  </div>
+</section>

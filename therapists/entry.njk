@@ -5,7 +5,8 @@ pagination:
     size: 1
     alias: therapist
 permalink: "{{ therapist.uri }}/"
-title: therapist.title
+renderData:
+  title: "{{ therapist.title }}"
 ---
 
 <section class="hero gradient-light [ px-4 pt-4 pb-8 ][ bg-pink-light bg-cover bg-center bg-no-repeat ]" style="background-image: url('/assets/images/hero/hero-graphic.jpg">
@@ -104,14 +105,14 @@ title: therapist.title
         
       {# Traning #}
         
-      {# <div class="bg-white shadow border border-gray-light rounded-lg overflow-hidden">
+      <div class="bg-white shadow border border-gray-light rounded-lg overflow-hidden">
          <span class="block font-base-semibold text-sm bg-navy text-white uppercase tracking-wide border-b-2 border-green p-4">Training Attended:</span>
         <ul class="ccs-list_alt [ text-base text-gray list-reset">
           {% for item in therapist.field_trainingAttended %}
             <li class="block w-full p-4 border-b border-gray-light">{{ item }}</li>
           {% endfor %}
         </ul>
-      </div> #}
+      </div>
     </aside>
   </div>
 </section>

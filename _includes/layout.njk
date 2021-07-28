@@ -10,7 +10,7 @@ title: Affordable, Reliable &amp; Confidential Counselling
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
 		<meta name="referrer" content="origin-when-cross-origin" />
 		<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
-		<title>{{ title  }} | Castle Counselling Services</title>
+		<title>{{ renderData.title  }} | Castle Counselling Services</title>
 
 		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
@@ -94,13 +94,13 @@ title: Affordable, Reliable &amp; Confidential Counselling
 						</ul>
 					</div>
 
-					{# <div class="pt-8">
+					<div class="pt-8">
 						<a href="/services" title="What We Offer" class="footer-block_title footer-bg [ block no-underline ][ font-base-semibold text-base ][ p-4 text-white hover:text-pink ][ border-b border-green rounded-t-lg ]">North Coast Counselling Services'</a>
 
 						<ul class="footer_list [ list-reset shadow rounded-b-lg py-2 ]">
 							{% for item in towns %}
 								<li>
-									<a href="/{{ item.uri }}" title="{{ item.title }}" class="block flex items-center justify-between no-underline text-sm [ text-white hover:text-pink px-4 py-2 ]">
+									<a href="/near/{{ item.uri }}" title="{{ item.title }}" class="block flex items-center justify-between no-underline text-sm [ text-white hover:text-pink px-4 py-2 ]">
 										<span>{{ item.title }}</span>
 										<svg class="flex-no-shrink ml-2 fill-current" style="height: 10px; width: 10px;" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
 											<title>Arrow Right Icon</title>
@@ -110,7 +110,7 @@ title: Affordable, Reliable &amp; Confidential Counselling
 								</li>
 							{% endfor %}
 						</ul>
-					</div>#}
+					</div>
 				</div>
 
 				{# Block 02 #}
